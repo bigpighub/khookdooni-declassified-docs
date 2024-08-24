@@ -4,8 +4,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import NextLink from "next/link";
-import ProTip from "@/components/ProTip";
-import Copyright from "@/components/Copyright";
+import { Grid } from "@mui/material";
+import CaseShowcase from "@/components/CaseShowcase";
 
 export default function Home() {
   return (
@@ -22,11 +22,17 @@ export default function Home() {
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
           Big pig started...
         </Typography>
-        <Link href="/about" color="secondary" component={NextLink}>
-          Go to the about page
-        </Link>
-        <ProTip />
-        <Copyright />
+
+        <Container disableGutters maxWidth={"xl"}>
+          <Grid container spacing={2}>
+            <Grid item md={3}>
+              <CaseShowcase />
+            </Grid>
+            <Grid item md={3}>
+              <CaseShowcase />
+            </Grid>
+          </Grid>
+        </Container>
       </Box>
     </Container>
   );
