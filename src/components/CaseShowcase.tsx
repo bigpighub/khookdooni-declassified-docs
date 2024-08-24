@@ -5,18 +5,18 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-function CaseShowcase() {
+import Image, { StaticImageData } from "next/image";
+import { Box } from "@mui/system";
+function CaseShowcase(props: { name: string; photo: StaticImageData }) {
   return (
     <>
       <Card>
-        <CardMedia
-          sx={{ height: 140 }}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="green iguana"
-        />
+        <CardMedia sx={{ height: 280, position: "relative" }}>
+          <Image src={props.photo} fill alt={props.name} />
+        </CardMedia>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+          <Typography gutterBottom variant="h6" component="div">
+            {props.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -24,8 +24,7 @@ function CaseShowcase() {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
-          <Button size="small">Learn More</Button>
+          <Button size="small">Read More</Button>
         </CardActions>
       </Card>
     </>

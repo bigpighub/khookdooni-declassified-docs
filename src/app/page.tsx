@@ -6,7 +6,7 @@ import Link from "@mui/material/Link";
 import NextLink from "next/link";
 import { Grid } from "@mui/material";
 import CaseShowcase from "@/components/CaseShowcase";
-
+import Masoud from "../../public/assets/mass/avatar.jpeg";
 export default function Home() {
   return (
     <>
@@ -21,19 +21,8 @@ export default function Home() {
       >
         <Container maxWidth={"lg"}>
           <Grid container spacing={2}>
-            <Grid
-              item
-              md={3}
-              sm={6}
-              xs={12}
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
-              <CaseShowcase />
-            </Grid>
             <Grid item md={3} sm={6} xs={12}>
-              <CaseShowcase />
+              <CaseShowcase name={"Masoud Valilou"} photo={Masoud} />
             </Grid>
           </Grid>
         </Container>
