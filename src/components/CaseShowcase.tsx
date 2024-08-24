@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 function CaseShowcase() {
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card>
         <CardMedia
           sx={{ height: 140 }}
           image="/static/images/cards/contemplative-reptile.jpg"

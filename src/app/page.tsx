@@ -9,7 +9,7 @@ import CaseShowcase from "@/components/CaseShowcase";
 
 export default function Home() {
   return (
-    <Container maxWidth="lg">
+    <>
       <Box
         sx={{
           my: 4,
@@ -19,21 +19,25 @@ export default function Home() {
           alignItems: "center",
         }}
       >
-        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-          Big pig started...
-        </Typography>
-
-        <Container disableGutters maxWidth={"xl"}>
+        <Container maxWidth={"lg"}>
           <Grid container spacing={2}>
-            <Grid item md={3}>
+            <Grid
+              item
+              md={3}
+              sm={6}
+              xs={12}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
               <CaseShowcase />
             </Grid>
-            <Grid item md={3}>
+            <Grid item md={3} sm={6} xs={12}>
               <CaseShowcase />
             </Grid>
           </Grid>
         </Container>
       </Box>
-    </Container>
+    </>
   );
 }
